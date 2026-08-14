@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Unit Converter Application</string>
+    <string name="title_unit_converter">Unit Converter</string>
+    <string name="hint_enter_value">Enter value</string>
+    <string name="label_category">Category</string>
+    <string name="label_from">From</string>
+    <string name="label_to">To</string>
+    <string name="btn_convert">CONVERT</string>
+    <string name="default_result">0.00</string>
+
+    <string-array name="categories">
+        <item>Length</item>
+        <item>Weight</item>
+        <item>Temperature</item>
+    </string-array>
+
+    <string-array name="length_units">
+        <item>Centimeter</item>
+        <item>Meter</item>
+        <item>Kilometer</item>
+    </string-array>
+
+    <string-array name="weight_units">
+        <item>Gram</item>
+        <item>Kilogram</item>
+        <item>Pound</item>
+    </string-array>
+
+    <string-array name="temp_units">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+</resources>

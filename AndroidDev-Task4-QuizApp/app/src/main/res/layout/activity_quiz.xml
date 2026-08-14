@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_white"
+    android:padding="16dp"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/questionCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Question 1/10"
+        android:textColor="@color/girly_purple_dark"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/quizProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="12dp"
+        android:max="10"
+        android:progress="1"
+        android:progressTint="@color/girly_purple"
+        android:progressBackgroundTint="@color/girly_purple_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionCounter" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/questionCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizProgressBar">
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
+            android:text="What is the capital of France?"
+            android:textAlignment="center"
+            android:textColor="@color/text_dark"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="serif" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/optionsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionCard">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/option1"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:padding="16dp"
+            android:text="Option 1"
+            android:textAllCaps="false"
+            android:textColor="@color/text_medium"
+            android:textSize="17sp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/girly_purple_light"
+            app:strokeWidth="2dp"
+            android:backgroundTint="@color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/option2"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:padding="16dp"
+            android:text="Option 2"
+            android:textAllCaps="false"
+            android:textColor="@color/text_medium"
+            android:textSize="17sp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/girly_purple_light"
+            app:strokeWidth="2dp"
+            android:backgroundTint="@color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/option3"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:padding="16dp"
+            android:text="Option 3"
+            android:textAllCaps="false"
+            android:textColor="@color/text_medium"
+            android:textSize="17sp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/girly_purple_light"
+            app:strokeWidth="2dp"
+            android:backgroundTint="@color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/option4"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:padding="16dp"
+            android:text="Option 4"
+            android:textAllCaps="false"
+            android:textColor="@color/text_medium"
+            android:textSize="17sp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/girly_purple_light"
+            app:strokeWidth="2dp"
+            android:backgroundTint="@color/white"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/girly_purple_dark"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="Next Sparkle ✨"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calc_background"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_display"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/calc_display_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:hint="@string/hint_zero"
+            android:padding="32dp"
+            android:textColor="@color/calc_text_main"
+            android:textSize="48sp"
+            android:fontFamily="sans-serif-light" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_display">
+
+        <!-- Row 1 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_clear"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/clear"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_action"
+            app:cornerRadius="28dp"
+            app:strokeColor="#FFC0CB"
+            app:strokeWidth="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_7"
+            app:layout_constraintEnd_toStartOf="@+id/btn_backspace"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_backspace"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/backspace"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_action"
+            app:cornerRadius="28dp"
+            app:strokeColor="#FFC0CB"
+            app:strokeWidth="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_8"
+            app:layout_constraintEnd_toStartOf="@+id/btn_divide"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_clear"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_divide"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/divide"
+            android:textColor="@color/calc_text_white"
+            android:textSize="26sp"
+            app:backgroundTint="@color/calc_btn_operator"
+            app:cornerRadius="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_backspace"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Row 2 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_7"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_7"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_4"
+            app:layout_constraintEnd_toStartOf="@+id/btn_8"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_clear" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_8"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_8"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_5"
+            app:layout_constraintEnd_toStartOf="@+id/btn_9"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_7"
+            app:layout_constraintTop_toBottomOf="@+id/btn_backspace" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_9"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_9"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_6"
+            app:layout_constraintEnd_toStartOf="@+id/btn_multiply"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_8"
+            app:layout_constraintTop_toBottomOf="@+id/btn_divide" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_multiply"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/multiply"
+            android:textColor="@color/calc_text_white"
+            android:textSize="26sp"
+            app:backgroundTint="@color/calc_btn_operator"
+            app:cornerRadius="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_minus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_9"
+            app:layout_constraintTop_toBottomOf="@+id/btn_divide" />
+
+        <!-- Row 3 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_4"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_4"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_1"
+            app:layout_constraintEnd_toStartOf="@+id/btn_5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_5"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_5"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_2"
+            app:layout_constraintEnd_toStartOf="@+id/btn_6"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_4"
+            app:layout_constraintTop_toBottomOf="@+id/btn_8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_6"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_6"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_3"
+            app:layout_constraintEnd_toStartOf="@+id/btn_minus"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_5"
+            app:layout_constraintTop_toBottomOf="@+id/btn_9" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_minus"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/minus"
+            android:textColor="@color/calc_text_white"
+            android:textSize="26sp"
+            app:backgroundTint="@color/calc_btn_operator"
+            app:cornerRadius="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_6"
+            app:layout_constraintTop_toBottomOf="@+id/btn_multiply" />
+
+        <!-- Row 4 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_1"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_1"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_0"
+            app:layout_constraintEnd_toStartOf="@+id/btn_2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_2"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_2"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_dot"
+            app:layout_constraintEnd_toStartOf="@+id/btn_3"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_1"
+            app:layout_constraintTop_toBottomOf="@+id/btn_5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_3"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_3"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_equal"
+            app:layout_constraintEnd_toStartOf="@+id/btn_plus"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_2"
+            app:layout_constraintTop_toBottomOf="@+id/btn_6" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_plus"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/plus"
+            android:textColor="@color/calc_text_white"
+            android:textSize="26sp"
+            app:backgroundTint="@color/calc_btn_operator"
+            app:cornerRadius="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_3"
+            app:layout_constraintTop_toBottomOf="@+id/btn_minus" />
+
+        <!-- Row 5 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_0"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/digit_0"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_dot"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dot"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/dot"
+            android:textColor="@color/calc_text_main"
+            android:textSize="22sp"
+            app:backgroundTint="@color/calc_btn_numeric"
+            app:cornerRadius="28dp"
+            app:rippleColor="#FFE4E1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_equal"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_0"
+            app:layout_constraintTop_toBottomOf="@+id/btn_2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_equal"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="6dp"
+            android:text="@string/equal"
+            android:textColor="@color/calc_text_white"
+            android:textSize="26sp"
+            app:backgroundTint="@color/calc_btn_equal"
+            app:cornerRadius="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_plus"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_dot"
+            app:layout_constraintTop_toBottomOf="@+id/btn_3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

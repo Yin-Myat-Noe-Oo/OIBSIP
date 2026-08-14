@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Aesthetic Girly Theme Colors -->
+    <color name="soft_purple">#B39DDB</color>
+    <color name="deep_purple">#7E57C2</color>
+    <color name="lavender_light">#E1BEE7</color>
+    <color name="cream_background">#FFFDF7</color>
+    <color name="cream_card">#FFFFFF</color>
+    <color name="text_color">#4A148C</color>
+</resources>

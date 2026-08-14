@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#2D2D2D</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Girly Purple & Creamy White Palette -->
+    <color name="cream_white">#FFFBF2</color>
+    <color name="soft_lavender">#F3E5F5</color>
+    <color name="girly_purple_light">#E1BEE7</color>
+    <color name="girly_purple">#BA68C8</color>
+    <color name="girly_purple_dark">#8E24AA</color>
+    <color name="accent_pink">#F06292</color>
+
+    <!-- Feedback Colors (Softened) -->
+    <color name="soft_green">#81C784</color>
+    <color name="soft_red">#E57373</color>
+
+    <color name="text_dark">#4A148C</color>
+    <color name="text_medium">#7B1FA2</color>
+</resources>
